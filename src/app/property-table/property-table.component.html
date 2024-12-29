@@ -1,0 +1,24 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Price</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (property of properties; track property.id) {
+    <tr>
+      <td>{{ property.id }}</td>
+      <td>{{ property.name }}</td>
+      <td>{{ property.address }}</td>
+      <td>{{ property.price | currency }}</td>
+      <td>{{ property.status }}</td>
+      <td><button (click)="navigateToDetails(property.id)">Details</button></td>
+    </tr>
+    }
+  </tbody>
+</table>

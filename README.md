@@ -2,58 +2,74 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
+## Getting started
+
+1. Clone this repo
+
+   ```bash
+   git clone https://github.com/SeifEleslamGouda/property-listing-task.git
+   ```
+
+2. install dependencies
+   ```bash
+   npm i
+   ```
+
 ## Development server
 
-To start a local development server, run:
+1.  Start a local development server on port 4200:
 
-```bash
-ng serve
-```
+    ```bash
+    npm start
+    ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+2.  Start mock database server
+    ```bash
+    npm run server
+    ```
 
-## Code scaffolding
+## Features
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Property Table**: Displays a list of properties.
 
-```bash
-ng generate component component-name
-```
+- **Property Details Page**: Shows the details of a specific property.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Core Tasks
 
-```bash
-ng generate --help
-```
+1. Modify the `property-table.component.ts` to fetch 10 properties at a time from the mocked data.
 
-## Building
+2. Implement a caching mechanism:
+   - Limit the cache zone so you only load cache when convenient.
+   - Ensure that the caching mechanism also save the scroll position.
 
-To build the project run:
+## Optional Tasks
 
-```bash
-ng build
-```
+- Modify the `property-details.component.ts` to fetch data details and show it in the details page
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- Add filtration to the table to filter using the status of the property
 
-## Running unit tests
+- Add Search to the table:
+  - write your own searching function as it's not supported by the mock database (According to my knowledge)
+  - make the search functionality generic and as optimized as possible.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Evaluation Considerations
 
-```bash
-ng test
-```
+- Code Structure and Maintainability
+- Effective Use of Angular Concepts (State Management, etc.)
+- Error Handling and API Interactions
+- Attention to UI/UX details
+- Completeness of Features and Functionality
 
-## Running end-to-end tests
+## Resources
 
-For end-to-end (e2e) testing, run:
+- Mock API Documentation (JSON Server): https://www.npmjs.com/package/json-server
 
-```bash
-ng e2e
-```
+## Notes
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- Feel free to use a state management library (NgRx or other) if you deem it appropriate.
+- Focus on the core tass first. Additional tasks are excellent ways to demonstrate your skills further.
 
-## Additional Resources
+## Comments
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Add comments to explain your code, highlight advantages, or acknowledge trade-offs where necessary.
+- Feel free to provide feedback on the task or interview process in `app.component.ts` — this won't affect task evaluation.
